@@ -5,12 +5,12 @@ public class ConsolePrinter : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		float location;
-		location = 5.0f; // Distance in meters
+		float location = 3.0f; // Distance in meters
+		float homeLocation = 2.1f;
+		float distance = homeLocation - location;
 		print("Welcome to Go Home!");
 		print("A game were you need to find you way back.");
-		print("Location:");
-		print(location);
+		print("Distance:" + distance);
 	}
 	
 	// Update is called once per frame
