@@ -27,6 +27,13 @@ public class ConsolePrinter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (Input.GetKeyDown(KeyCode.LeftArrow))
+		{
+			print("Left key pressed.");
+		}
+		if (Input.GetKeyDown(KeyCode.RightArrow))
+		{
+			print("Right key pressed.");
+		}
 	}
 }
