@@ -8,28 +8,51 @@ public class ConsolePrinter : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Vector2 pathToHome = homeLocation - location;
 		print("Welcome to Go Home!");
 		print("A game were you need to find you way back.");
-		print("Path to home: " + pathToHome);
-		print("Distance to home: " + pathToHome.magnitude);
-		if (location == homeLocation)
-		{
-			print("I am at home!");
-		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.LeftArrow))
 		{
-			print("Location: " + location);
-			print("Left key pressed.");
+			location = location + new Vector2(-1, 0);
+			Vector2 pathToHome = homeLocation - location;
+			print("Distance to home: " + pathToHome.magnitude);
+			if (location == homeLocation)
+			{
+				print("I am at home!");
+			}
 		}
 		if (Input.GetKeyDown(KeyCode.RightArrow))
 		{
-			location = new Vector2(2, 3);
-			print("Right key pressed.");
+			location = location + new Vector2(1, 0);
+			Vector2 pathToHome = homeLocation - location;
+			print("Distance to home: " + pathToHome.magnitude);
+			if (location == homeLocation)
+			{
+				print("I am at home!");
+			}
+		}
+		if (Input.GetKeyDown(KeyCode.UpArrow))
+		{
+			location = location + new Vector2(0, 1);
+			Vector2 pathToHome = homeLocation - location;
+			print("Distance to home: " + pathToHome.magnitude);
+			if (location == homeLocation)
+			{
+				print("I am at home!");
+			}
+		}
+		if (Input.GetKeyDown(KeyCode.DownArrow))
+		{
+			location = location + new Vector2(0, -1);
+			Vector2 pathToHome = homeLocation - location;
+			print("Distance to home: " + pathToHome.magnitude);
+			if (location == homeLocation)
+			{
+				print("I am at home!");
+			}
 		}
 	}
 }
