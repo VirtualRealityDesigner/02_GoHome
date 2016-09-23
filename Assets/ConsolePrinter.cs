@@ -3,10 +3,11 @@ using System.Collections;
 
 public class ConsolePrinter : MonoBehaviour {
 
+	public Vector2 location;
+	public Vector2 homeLocation;
+
 	// Use this for initialization
 	void Start () {
-		Vector2 location = new Vector2(2.0f, 3.0f); // Distance in meters
-		Vector2 homeLocation = new Vector2(5.0f, 1.0f);
 		Vector2 pathToHome = homeLocation - location;
 		print("Welcome to Go Home!");
 		print("A game were you need to find you way back.");
@@ -22,10 +23,12 @@ public class ConsolePrinter : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.LeftArrow))
 		{
+			print("Location: " + location);
 			print("Left key pressed.");
 		}
 		if (Input.GetKeyDown(KeyCode.RightArrow))
 		{
+			location = new Vector2(2, 3);
 			print("Right key pressed.");
 		}
 	}
