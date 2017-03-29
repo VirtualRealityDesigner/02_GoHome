@@ -123,4 +123,5 @@
 + Why not start the next section right-away?
 
 ---
-Find out more about our [Make Mobile VR Games in Unity](https://www.udemy.com/vrcourse/?couponCode=GitHubDiscount).
+Find out more about our [Virtual Reality Designer Course](https://www.udemy.com/vrcourse/?couponCode=GitHubDiscount)
+
